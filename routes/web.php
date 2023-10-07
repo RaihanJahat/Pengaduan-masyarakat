@@ -20,9 +20,6 @@ Route::get('/', function () {
 Route::get('login',function(){
     return View('project.login');
 });
-Route::get('dasbord',function(){
-    return View('project.dasbord');
-});
 
 
 
@@ -41,7 +38,8 @@ Route::post('login',[MasyarakatControll::class,'ceklogin']);
 Route::get('laporan',[MasyarakatControll::class,'laporan']);
 Route::post('laporan',[MasyarakatControll::class,'laporan']);
 
-Route::get('bd',[MasyarakatControll::class,'bd']);
+Route::get('tampilan',[MasyarakatControll::class,'tampilan']);
+Route::get('halaman',[MasyarakatControll::class,'halaman']);
 
 
 

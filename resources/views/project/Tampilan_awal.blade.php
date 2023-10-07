@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Laporan</title>
+    <title>Tampilan Awal</title>
     <style>
         body {
           margin: 0;
           font-family: "Lato", sans-serif;
-          background-image: url("");
+          background: linear-gradient(120deg,#ff0000,#000000);
           height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -19,14 +19,16 @@
 
 .topnav {
   overflow: hidden;
-  background-color: rgb(, 2, 2);
+  background: linear-gradient(120deg,#ff0000,#000000);
+
 }
 .h5{
-color: rgb(255, 255, 255);
+color: red;
 font-size: 30px;
 text-align: center;
 padding: 100px 0 10px 0;
-text-shadow: 2px 2px 5px rgb(0, 0, 0);
+text-shadow: 3px 2px 1px black;
+
 }
 
 .topnav a:hover {
@@ -66,16 +68,13 @@ table{
 </head>
 <body>
     <div class="topnav">
-        <a href="#" class="active">Home</a>
-        <a href="#">Tentang Laporan</a>
-        <a href="#"></a>
-        <a href="#"></a>
-        <a href="#"></a>
+        <a href="{{url('tampilan')}}" class="active">Home</a>
+        <a href="{{url('laporan')}}">Tentang Laporan</a>
         
       
         <div class="topnav-right">
-    <a href="#" class="button">Login</a>
-    <a href="#" class="button">Daftar</a>
+    <a href="{{url('login')}}" class="button">Login</a>
+    <a href="{{url('registrasi')}}" class="button">Registrasi</a>
         </a>
         </div>
       </div>
@@ -83,6 +82,10 @@ table{
         <h1>Selamat Datang</h1>
       <h2>Di  Layanan Pengaduan Online</h2>
   <h3>Sampaikan Laporan Anda Kepada Instansi Pemerintah Berwenang</h3>
+  <h3>ㅤ</h3>
+  <h3>ㅤ</h3>
+  <h3>ㅤ</h3> 
+  <h3>ㅤ</h3> 
       </div>
 </body>
 </html>

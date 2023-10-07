@@ -6,14 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Registrasi</title>
-
+<style>
+body{
+    background: linear-gradient(120deg,#ff0000,#000000);
+}
+</style>
     <link rel="stylesheet" href="/css/bootstrap.min.css">
 </head>
 
 <body>
     <div id="main" class="d-flax align-items-center vh-100">
         <div class="container">
-            <div class="card shadow m-auto" style="width: 400px">
+            <div class="card shadow m-auto mt-5" style="width: 400px">
                 <div class="card-body">
                     <h4 class="h4">Daftarkan Diri Anda</h4>
                     @if (session('Pesan'))
