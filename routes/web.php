@@ -56,3 +56,4 @@ Route::get('bd',[MasyarakatControll::class,'bd']);
 
 
 
+Route::get('/');

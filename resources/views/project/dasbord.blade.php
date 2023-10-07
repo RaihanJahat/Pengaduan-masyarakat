@@ -9,7 +9,7 @@
         body {
           margin: 0;
           font-family: "Lato", sans-serif;
-          background-image: url("ppp.jpg");
+          background-image: url("");
           height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -19,7 +19,7 @@
 
 .topnav {
   overflow: hidden;
-  background-color: rgb(2, 2, 2);
+  background-color: rgb(, 2, 2);
 }
 .h5{
 color: rgb(255, 255, 255);
