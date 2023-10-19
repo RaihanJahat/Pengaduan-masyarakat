@@ -96,7 +96,7 @@
         }
 
         .submit:hover {
-            box-shadow: 1px 5px 7px 1px rgba(255, 255, 255, 0.2);
+            box-shadow: 1px 5px 7px 1px rgb(255, 255, 255);
         }
 
         .bottom {
@@ -104,7 +104,7 @@
             flex-direction: row;
             justify-content: space-between;
             font-size: small;
-            color: #ffffff;
+            color:#f6f6f6;
             margin-top: 10px;
             
         }
@@ -112,12 +112,14 @@
         .left {
             display: flex;
             padding: 2px;
+            color:#f6f6f6;
         }
 
         label a {
             color: #f6f6f6;
             text-decoration: none;
         }
+        
     </style>
 </head>
 
@@ -142,11 +144,9 @@
                 </div>
                 <div class="buttom">
                     <div class="left">
-                        <input type="checkbox" id="check">
-                        <label for="check">Remember me</label>
-                    </div>
-                    <div class="left">
-                        <label><a href="#">Forgot password?</a></label>
+                        <p>
+                          Belum Punya Akun? <a href="{{url('registrasi')}}">Register</a>
+                        </p>
                     </div>
                 </div>
                 </form>

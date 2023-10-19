@@ -26,11 +26,11 @@ class MasyarakatControll extends Controller
     public function simpan (Request $request){
         $c = new Masyarakat();
         $cek= $request->validate([
-            'Nik'=>'required|unique:masyarakat|max:16',
-            'Nama'=>'required',
-            'Username'=>'required|min:6',
-            'Password'=>'required|min:4',
-            'Tepl'=>'required|max:13'
+            'nik'=>'required|unique:masyarakat|max:16',
+            'nama'=>'required',
+            'username'=>'required|min:6',
+            'password'=>'required|min:4',
+            'telp'=>'required|max:13'
         ]);
         $c->create( $request->all());
         //Ck DAta yang dikirim
@@ -39,7 +39,7 @@ class MasyarakatControll extends Controller
 
         // return redirect('registrasi');
 
-        return back()->with('Pesan','anda berasil registrasi');
+        return redirect('login')->with('Pesan','anda berhasil registrasi');
     }
     public function login(){
 
@@ -49,20 +49,19 @@ class MasyarakatControll extends Controller
         $m = new Masyarakat();
         //cek username dan password
         if($m->where('Username',$request->input('Username'))->where('Password',$request->input('Password'))->exists()){
-            return redirect('/');
+            return redirect('halaman');
         }
-        return back()->with('Pesan','Username dan Password tidak terdaftar');
+        return back('')->with('Pesan','Username dan Password tidak terdaftar');
         
     }
 
+    public function pengaduan(){
+        return view('masyarakat.pengaduan');
+    }
+    public function halaman(){
+        return view('masyarakat.halaman_utama');
+    }
     public function laporan(){
         return view('masyarakat.laporan');
     }
-    public function tampilan(){
-        return view('project.tampilan_awal');
-    }
-    public function halaman(){
-        return view('project.halaman_utama');
-
-}
 }

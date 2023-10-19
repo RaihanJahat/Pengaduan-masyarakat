@@ -10,11 +10,13 @@
 body{
     background: linear-gradient(120deg,#ff0000,#000000);
 }
+
 </style>
     <link rel="stylesheet" href="/css/bootstrap.min.css">
 </head>
 
 <body>
+    
     <div id="main" class="d-flax align-items-center vh-100">
         <div class="container">
             <div class="card shadow m-auto mt-5" style="width: 400px">
@@ -27,9 +29,9 @@ body{
                         </div>
                     @endif
                     @if ($errors->any())
-                        <div class="alert alert-success" role="alert">
+                        <div class="alert alert-danger" role="alert">
 
-                            gagal coy
+                            Gagal Coy
                         </div>
                     @endif
 
@@ -37,51 +39,61 @@ body{
                         @csrf
                         <div class="mb-3">
 
-                            <label for="Nik" class="form-label">Nik</label>
-                            <input type="text" class="form-control" name="Nik" id="Nik" placeholder="Nik">
+                            <label for="nik" class="form-label">Nik</label>
+                            <input type="number" class="form-control" name="nik" id="nik" placeholder="Nik">
 
-                            @error('Nik')
+                            @error('nik')
                                 <div class="form-text">
                                     {{ $message }}
                                 </div>
                             @enderror
 
-                            <label for="Nama" class="form-label">Nama</label>
-                            <input type="text" class="form-control" name="Nama" id="Nama"
+                            <label for="nama" class="form-label">Nama</label>
+                            <input type="text" class="form-control" name="nama" id="nama"
                                 placeholder="Nama Lengkap">
 
-                            @error('Nama')
+                            @error('nama')
                                 <div class="form-text">
                                     {{ $message }}
                                 </div>
                             @enderror
 
-                            <label for="Username" class="form-label">Username</label>
-                            <input type="text" class="form-control" name="Username" id="Username"
-                                placeholder="Username">
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" class="form-control" name="username" id="username"
+                                placeholder="username">
 
-                            @error('Username')
+                            @error('username')
                                 <div class="form-text">
                                     {{ $message }}
                                 </div>
                             @enderror
 
-                            <label for="Password" class="form-label">Password</label>
-                            <input type="text" class="form-control" name="Password" id="Password"
-                                placeholder="Password">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" name="password" id="password"
+                                placeholder="password">
 
-                            @error('Password')
+                            @error('password')
                                 <div class="form-text">
                                     {{ $message }}
                                 </div>
                             @enderror
+                            <label for="telp" class="form-label">Telp</label>
+                            <input type="number" class="form-control" name="telp" id="telp"
+                                placeholder="telp">
 
-                        
-
-
+                            @error('telp')
+                                <div class="form-text">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                            
+                        </div>
+                        <div class="col-12 pt-4 text-center">
+                            <p class="small mb-0">
+                                Sudah Punya Akun? <a href="{{url('login')}}">Login Ayena</a>
+                                    </p>
                         </div>
                         <button class="btn form-control btn-primary mb-2">Registrasi</button>
-                        <button class="btn form-control btn-outline-success mb-2">Batal</button>
                     </form>
                 </div>
             </div>

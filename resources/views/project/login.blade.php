@@ -112,7 +112,7 @@
                     <input type="password" class="input" placeholder="password" name="password" required>
             
             </div>
-                    <div class="input-field">
+                    <div class="input-field" href="{{url('halaman')}}">
                         <input type="submit" class="submit" value="Login">
                     </div>
                     <div class="buttom">

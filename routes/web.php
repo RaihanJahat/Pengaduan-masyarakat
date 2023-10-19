@@ -25,33 +25,12 @@ Route::get('login',function(){
 
 //data masyarakat
 Route::get('masyarakat',[MasyarakatControll::class,'index']);
-
 Route::get('registrasi',[MasyarakatControll::class,'registrasi']);
-
 Route::post('Simpan',[MasyarakatControll::class,'simpan']);
-
-//proses login
 Route::get('login',[MasyarakatControll::class,'login']);
-
 Route::post('login',[MasyarakatControll::class,'ceklogin']);
-
-Route::get('laporan',[MasyarakatControll::class,'laporan']);
-Route::post('laporan',[MasyarakatControll::class,'laporan']);
-
+Route::get('pengaduan',[MasyarakatControll::class,'pengaduan']);
+Route::post('pengaduan',[MasyarakatControll::class,'pengaduan']);
 Route::get('tampilan',[MasyarakatControll::class,'tampilan']);
 Route::get('halaman',[MasyarakatControll::class,'halaman']);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Route::get('/');
+Route::get('laporan',[MasyarakatControll::class,'laporan']);

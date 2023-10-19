@@ -75,15 +75,14 @@
 
 <body>
     <div class="topnav">
-        <a href="#" class="active">Home</a>
-        <a href="#">Tanggapan</a>
-        <a href="#">Validasi</a>
-        <a href="#">Laporan</a>
+        <a href="{{url('/')}}" class="active">Home</a>
+        <a href="{{url('pengaduan')}}">Pengaduan</a>
+        <a href="{{url('laporan')}}">Laporan</a>
         <a href="#"></a>
 
 
         <div class="topnav-right">
-            <a href="#" class="button">Logout</a>
+            <a href="{{url('login')}}" class="button">Logout</a>
             </a>
         </div>
     </div>
@@ -91,6 +90,9 @@
         <h1>Selamat Datang</h1>
         <h2>Di Halaman Utama</h2>
         <h3>ㅤ</h3>
+        <div>
+    <a href="{{url('pengaduan')}}">Lapor</a> 
+        </div>
         <h3>ㅤ</h3>
         <h3>ㅤ</h3>
         <h3>ㅤ</h3>
