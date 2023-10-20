@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 
 class MasyarakatControll extends Controller
 {
-    public function index(){
+    public function login2(){
         $m = new Masyarakat();
-        return view('Masyarakat.index');
+        return view('Masyarakat.login');
     }
 
 
@@ -29,7 +29,7 @@ class MasyarakatControll extends Controller
             'nik'=>'required|unique:masyarakat|max:16',
             'nama'=>'required',
             'username'=>'required|min:6',
-            'password'=>'required|min:4',
+            'password'=>'required|min:3',
             'telp'=>'required|max:13'
         ]);
         $c->create( $request->all());
@@ -39,13 +39,13 @@ class MasyarakatControll extends Controller
 
         // return redirect('registrasi');
 
-        return redirect('login')->with('Pesan','anda berhasil registrasi');
+        return redirect('login1')->with('Pesan','anda berhasil registrasi');
     }
     public function login(){
 
-        return view('masyarakat.login');
+        return view('masyarakat.login1');
     }
-    public function ceklogin(Request $request){
+    public function ceklogin1(Request $request){
         $m = new Masyarakat();
         //cek username dan password
         if($m->where('Username',$request->input('Username'))->where('Password',$request->input('Password'))->exists()){
@@ -55,6 +55,7 @@ class MasyarakatControll extends Controller
         
     }
 
+    //masyarakat
     public function pengaduan(){
         return view('masyarakat.pengaduan');
     }

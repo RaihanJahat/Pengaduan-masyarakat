@@ -10,7 +10,7 @@
             font-family: 'poppins', sans serif;
         }
         body{
-            background: linear-gradient(120deg,#102010,#aaa);
+            background: linear-gradient(120deg,#3383ff,#aaa);
             background-size:cover ;
             height: 100vh;
             background-repeat: no-repeat;

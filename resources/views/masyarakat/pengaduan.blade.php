@@ -77,7 +77,7 @@
     <div class="topnav">
         <a href="{{url('halaman')}}" class="active">Home</a>
         <a href="{{url('pengaduan')}}">Pengaduan</a>
-        <a href="{{url('laporan')}}">Laporan</a>
+        <a href="#"></a>
         <a href="#"></a>
         
       
