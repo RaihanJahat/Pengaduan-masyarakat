@@ -10,7 +10,7 @@
         body {
             margin: 0;
             font-family: "Lato", sans-serif;
-            background: linear-gradient(120deg, #ff0000, #000000);
+            background: linear-gradient(120deg, #3383FF, #000000);
             height: 100%;
             background-position: center;
 
@@ -20,12 +20,12 @@
 
         .topnav {
             overflow: hidden;
-            background: linear-gradient(120deg, #ff0000, #000000);
+            background: linear-gradient(120deg, #3383FF, #000000);
 
         }
 
         .h5 {
-            color: red;
+            color: blue;
             font-size: 30px;
             text-align: center;
             padding: 100px 0 10px 0;
@@ -75,24 +75,20 @@
 
 <body>
     <div class="topnav">
-        <a href="{{url('/')}}" class="active">Home</a>
-        <a href="{{url('pengaduan')}}">Pengaduan</a>
-        <a href="#"></a>
-        <a href="#"></a>
+        <a href="{{url('')}}" class="active">Home</a>
+        <a href="{{url('')}}">Tanggapan</a>
+        <a href="{{url('')}}">Laporan</a>
 
 
         <div class="topnav-right">
-            <a href="{{url('login')}}" class="button">Logout</a>
+            <a href="{{url('login2')}}" class="button">Logout</a>
             </a>
         </div>
     </div>
     <div class="h5">
         <h1>Selamat Datang</h1>
-        <h2>Di Halaman Utama</h2>
+        <h2>Di Halaman Petugas</h2>
         <h3>ㅤ</h3>
-        <div>
-    <a href="{{url('pengaduan')}}">Lapor</a> 
-        </div>
         <h3>ㅤ</h3>
         <h3>ㅤ</h3>
         <h3>ㅤ</h3>

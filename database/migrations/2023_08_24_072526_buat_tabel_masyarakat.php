@@ -12,11 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('masyarakat',function(Blueprint $tabel){
-            $tabel->char('Nik',16);
-            $tabel->string('Nama',35);
-            $tabel->string('Username',25);
-            $tabel->string('Password',32);
-            $tabel->string('Tepl',13);
+            $tabel->char('nik',16);
+            $tabel->string('nama',35);
+            $tabel->string('username',25);
+            $tabel->string('password',32);
+            $tabel->string('telp',13);
             $tabel->timestamps();
             $tabel->primary('Nik');
         });

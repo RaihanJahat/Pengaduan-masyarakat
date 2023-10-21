@@ -90,7 +90,7 @@ body{
                         </div>
                         <div class="col-12 pt-4 text-center">
                             <p class="small mb-0">
-                                Sudah Punya Akun? <a href="{{url('login')}}">Login Ayena</a>
+                                Sudah Punya Akun? <a href="{{url('login1')}}">Login Ayena</a>
                                     </p>
                         </div>
                         <button class="btn form-control btn-primary mb-2">Registrasi</button>

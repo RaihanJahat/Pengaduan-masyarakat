@@ -7,15 +7,15 @@ use Illuminate\Http\Request;
 
 class MasyarakatControll extends Controller
 {
-    public function login2(){
+    public function login1(){
         $m = new Masyarakat();
-        return view('Masyarakat.login');
+        return view('masyarakat.login');
     }
 
 
     public function registrasi(){
         $m = new Masyarakat();
-        return view('Masyarakat.registrasi');
+        return view('masyarakat.registrasi');
 
     }
 
@@ -28,7 +28,7 @@ class MasyarakatControll extends Controller
         $cek= $request->validate([
             'nik'=>'required|unique:masyarakat|max:16',
             'nama'=>'required',
-            'username'=>'required|min:6',
+            'username'=>'required|min:3',
             'password'=>'required|min:3',
             'telp'=>'required|max:13'
         ]);
@@ -49,7 +49,7 @@ class MasyarakatControll extends Controller
         $m = new Masyarakat();
         //cek username dan password
         if($m->where('Username',$request->input('Username'))->where('Password',$request->input('Password'))->exists()){
-            return redirect('halaman');
+            return redirect('halaman_utama/masyarakat');
         }
         return back('')->with('Pesan','Username dan Password tidak terdaftar');
         

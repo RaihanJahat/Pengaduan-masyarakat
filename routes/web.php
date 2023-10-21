@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\MasyarakatControll;
+use App\Http\Controllers\PetugasController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,10 +17,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 Route::get('login',function(){
-    return View('project.login');
+    return View('login');
 });
 
 
@@ -28,14 +30,19 @@ Route::get('masyarakat',[MasyarakatControll::class,'index']);
 Route::get('registrasi',[MasyarakatControll::class,'registrasi']);
 Route::post('Simpan',[MasyarakatControll::class,'simpan']);
 Route::get('login1',[MasyarakatControll::class,'login1']);
-Route::post('login2',[MasyarakatControll::class,'ceklogin2']);
+Route::post('login1',[MasyarakatControll::class,'ceklogin1']);
 Route::get('pengaduan',[MasyarakatControll::class,'pengaduan']);
 Route::post('pengaduan',[MasyarakatControll::class,'pengaduan']);
-Route::get('tampilan',[MasyarakatControll::class,'tampilan']);
-Route::get('halaman/masyarakat',[MasyarakatControll::class,'halaman/masyarakat']);
+Route::get('halaman_utama/masyarakat',[MasyarakatControll::class,'halaman']);
 Route::get('laporan',[MasyarakatControll::class,'laporan']);
 
 
 //petugas
 Route::get('login2',[PetugasController::class,'login2']);
 Route::post('login2',[PetugasController::class,'ceklogin2']);
+Route::get('halaman_utama/petugas',[PetugasController::class,'halaman2']);
+
+
+//admin
+Route::get('login3',[AdminController::class,'login3']);
+Route::post('login3',[AdminController::class,'ceklogin3']);

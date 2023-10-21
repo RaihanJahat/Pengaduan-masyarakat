@@ -127,7 +127,7 @@
     <div class="box">
         <div class="box1">
             <div class="top-header">
-                <form action="" method="post">
+                <form action="{{url('login1')}}" method="post">
                     @csrf
                     <header>Login</header>
             </div>

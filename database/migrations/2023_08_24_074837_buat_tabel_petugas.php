@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('petugas',function(Blueprint $tabel){
             $tabel->integer('id_petugas');
-            $tabel->string('Nama_petugas',35);
-            $tabel->string('Username',25);
-            $tabel->string('Password',32);
-            $tabel->string('Telp',13);
-            $tabel->enum('Level',['admin','petugas']);
+            $tabel->string('nama_petugas',35);
+            $tabel->string('username',25);
+            $tabel->string('password',32);
+            $tabel->string('telp',13);
+            $tabel->enum('level',['admin','petugas']);
             $tabel->timestamps();
             $tabel->primary('id_petugas');
         });

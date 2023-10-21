@@ -1,132 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>Login</title>
     <style>
-        *{
+        * {
             font-family: 'poppins', sans serif;
         }
-        body{
-            background: linear-gradient(120deg,#3383ff,#aaa);
-            background-size:cover ;
+
+        body {
+            background: linear-gradient(120deg, #33FF36, #000000);
+            background-size: cover;
             height: 100vh;
             background-repeat: no-repeat;
             background-position: center;
             background-attachment: fixed;
         }
-        .box{
+
+        .box {
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 90vh;
+
+            width: 300px;
+            margin: 50px auto;
+            padding: -5px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgb(0,0, 0)
         }
-        .bok1{
+
+        .bok1 {
             width: 350px;
             display: flex;
             flex-direction: column;
             padding: 0 15px 0 15px;
         }
-        span{
+
+        span {
             color: #fff;
             font-size: small;
             display: flex;
             justify-content: center;
             padding: 10px 0 10px 0;
         }
-        header{
-            color: #fff;
+
+        header {
+            color: #ffffff;
             font-size: 30px;
             display: flex;
             justify-content: center;
             padding: 10px 0 10px 0;
-        
+
         }
-        .input-field{
+
+        .input-field {
             display: flex;
             flex-direction: column;
             justify-content: center;
             padding: 10px 0 10px 0;
-            
-        }
-        .input{
+           
+
+        }   
+
+        .input {
             height: 45px;
             width: 78%;
             border: none;
             outline: none;
             border-radius: 10px;
-            color: #fff;
+            color: #ffffff;
             margin-top: 7px;
-            padding: 0 0 0 50px ;
-            background:rgba(255, 255, 255,0.1) ;
+            padding: 0 0 0 50px;
+            background: rgba(255, 247, 247, 0.1);
         }
-        ::-webkit-input-placeholder{
-            color: #fff;
+
+        ::-webkit-input-placeholder {
+            color: #f8f8f8;
         }
-        .sumbit{
+
+        .sumbit {
             border: none;
             border-radius: 30px;
             font-size: 15px;
             height: 45px;
             outline: none;
             width: 100px;
-            background: (255, 255, 255,0,7);
+            background: (255, 255, 255, 0, 7);
             cursor: pointer;
             transition: .3s;
         }
-        .submit:hover{
-            box-shadow: 1px 5px 7px 1px rgba(240, 236, 236, 0.2) ;
+
+        .submit:hover {
+            box-shadow: 1px 5px 7px 1px rgb(255, 255, 255);
         }
-        .bottom{
+
+        .bottom {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             font-size: small;
-            color: #fff;
+            color:#f6f6f6;
             margin-top: 10px;
+            
         }
-        .left{
+
+        .left {
             display: flex;
             padding: 2px;
+            color:#f6f6f6;
         }
-        label a{
-            color: #fff;
+
+        label a {
+            color: #f6f6f6;
             text-decoration: none;
         }
-            </style>
+        
+    </style>
 </head>
+
 <body>
     <div class="box">
         <div class="box1">
             <div class="top-header">
-                <form action="" method="post">
-                <header>Form Login </header>
+                <form action="{{url('login3')}}" method="post">
+                    @csrf
+                    <header>Login Admin</header>
             </div>
 
             <div class="input-field">
-                <input type="text" class="input" placeholder="Username" name="username" required>
+                <input type="text" class="input" placeholder="Username" name="Username" required>
 
-            <div class="input-field">
-                    <input type="password" class="input" placeholder="password" name="password" required>
-            
-            </div>
-                    <div class="input-field" href="{{url('halaman')}}">
-                        <input type="submit" class="submit" value="Login">
+                <div class="input-field">
+                    <input type="text" class="input" placeholder="Password" name="Password" required>
+
+                </div>
+                <div class="input-field">
+                    <input type="submit" class="submit" value="Login">
+                </div>
+                <div class="buttom">
+                    <div class="left">
+                    
                     </div>
-                    <div class="buttom">
-                        <div class="left">
-                            <input type="checkbox" id="check">
-                            <label for="check">Remember me</label>
-                        </div>
-                        <div class="left">
-                            <label><a href="#">Forgot password?</a></label>
-                        </div>
-                    </div>
-    </form>
+                </div>
+                </form>
             </div>
         </div>
     </div>
 </body>
+
 </html>

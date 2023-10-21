@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('pengaduan',function(Blueprint $tabel){
             $tabel->integer('id_pengaduan');
             $tabel->date('tgl_pengaduan');
-            $tabel->char('Nik',16);
+            $tabel->char('nik',16);
             $tabel->text('isi_laporan');
             $tabel->string('foto',255);
-            $tabel->enum('Status',['proses','selesai','0']);
+            $tabel->enum('status',['proses','selesai','0']);
             $tabel->timestamps();
             $tabel->primary('id_pengaduan');
         });
