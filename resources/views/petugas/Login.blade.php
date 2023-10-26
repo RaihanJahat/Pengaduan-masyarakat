@@ -13,7 +13,7 @@
         }
 
         body {
-            background: linear-gradient(120deg, #3383FF, #000000);
+            background: linear-gradient(120deg, #33FF36, #000000);
             background-size: cover;
             height: 100vh;
             background-repeat: no-repeat;
@@ -127,7 +127,7 @@
     <div class="box">
         <div class="box1">
             <div class="top-header">
-                <form action="{{url('login2')}}" method="post">
+                <form action="{{url('login3')}}" method="post">
                     @csrf
                     <header>Login Petugas</header>
             </div>
@@ -144,7 +144,6 @@
                 </div>
                 <div class="buttom">
                     <div class="left">
-                    
                     </div>
                 </div>
                 </form>

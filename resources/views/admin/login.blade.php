@@ -13,8 +13,8 @@
         }
 
         body {
-            background: linear-gradient(120deg, #33FF36, #000000);
-            background-size: cover;
+            background: linear-gradient(120deg, #3383FF, #000000);
+            background-size: cover;33FF36
             height: 100vh;
             background-repeat: no-repeat;
             background-position: center;
@@ -127,9 +127,9 @@
     <div class="box">
         <div class="box1">
             <div class="top-header">
-                <form action="{{url('login3')}}" method="post">
+                <form action="{{url('login2')}}" method="post">
                     @csrf
-                    <header>Login Admin</header>
+                    <header>Login Petugas</header>
             </div>
 
             <div class="input-field">
@@ -144,7 +144,7 @@
                 </div>
                 <div class="buttom">
                     <div class="left">
-                    
+                        Belum Punya Akun? <a href="{{url('registrasi2')}}">Register</a>
                     </div>
                 </div>
                 </form>

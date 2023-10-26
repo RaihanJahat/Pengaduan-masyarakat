@@ -15,10 +15,16 @@ class PetugasController extends Controller
             }
             return back('')->with('Pesan','Username Dan Password Tidak Terdaftar');
         }
-        public function login2(){
+        public function login3(){
             return view('petugas.login');
         }
         public function halaman2(){
             return view('petugas.halaman_utama');
         }
+        public function registrasi2(){
+            $m = new petugas();
+            return view('petugas.registrasi');
+    
+        }
+    
 }

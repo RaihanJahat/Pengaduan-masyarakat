@@ -13,7 +13,7 @@ class MasyarakatControll extends Controller
     }
 
 
-    public function registrasi(){
+    public function registrasi1(){
         $m = new Masyarakat();
         return view('masyarakat.registrasi');
 
@@ -49,7 +49,7 @@ class MasyarakatControll extends Controller
         $m = new Masyarakat();
         //cek username dan password
         if($m->where('Username',$request->input('Username'))->where('Password',$request->input('Password'))->exists()){
-            return redirect('halaman_utama/masyarakat');
+            return redirect('halaman/masyarakat');
         }
         return back('')->with('Pesan','Username dan Password tidak terdaftar');
         
@@ -64,5 +64,17 @@ class MasyarakatControll extends Controller
     }
     public function laporan(){
         return view('masyarakat.laporan');
+    }
+    //
+    public function laporkan(Request $request){
+        // siapkan variabel untuk file
+        $foto = $request->file('foto');
+        
+        //tentukan path
+        $folder = 'upload_data';
+
+        //pindahkan file ke target folder
+        $foto->move($folder, $foto->getClientOriginalName());
+        return "sukses";
     }
 }

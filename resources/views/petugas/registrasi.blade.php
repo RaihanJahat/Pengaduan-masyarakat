@@ -8,7 +8,7 @@
     <title>Registrasi</title>
 <style>
 body{
-    background: linear-gradient(120deg,#3383FF,#000000);
+    background: linear-gradient(120deg,#33FF36,#000000);
 }
 
 </style>

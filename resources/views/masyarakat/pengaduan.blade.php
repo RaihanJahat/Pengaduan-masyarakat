@@ -101,7 +101,7 @@
                                         Anda gagal registrasi
                                       </div>
                                     @endif
-                                        <form action="{{url('laporan')}}" method="POST">
+                                        <form action="{{url('laporan')}}" method="POST" enctype="multipart/form-data">
                                             @csrf
                                             <div class="mb-3">
                                                 <label for="nik" class="form-label">NIK</label>
@@ -131,7 +131,7 @@
                                             </div>
                                                 <div class="mb-3">    
                                                     <label for="isi_laporan" class="form-label">Isi Pengaduan</label>
-                                                    <textarea class="form-control" name="isi_laporan" id="isi_laporan" rows="3"></textarea>
+                                                    <textarea class="form-control" name="isi_laporan" id="isi_laporan" rows="3" ></textarea>
                                                 @error('isi_laporan')
                                                     <div class="form-text">
                                                         {{$message}}

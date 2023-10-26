@@ -16,11 +16,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
+Route::get('login1', function () {
+    return view('masyarakat.login');
 });
-Route::get('login',function(){
-    return View('login');
+Route::get('login1',function(){
+    return View('masyarakat.login');
 });
 
 
@@ -33,16 +33,20 @@ Route::get('login1',[MasyarakatControll::class,'login1']);
 Route::post('login1',[MasyarakatControll::class,'ceklogin1']);
 Route::get('pengaduan',[MasyarakatControll::class,'pengaduan']);
 Route::post('pengaduan',[MasyarakatControll::class,'pengaduan']);
-Route::get('halaman_utama/masyarakat',[MasyarakatControll::class,'halaman']);
+Route::get('halaman/masyarakat',[MasyarakatControll::class,'halaman']);
 Route::get('laporan',[MasyarakatControll::class,'laporan']);
+//
+Route::get('laporan',[MasyarakatControll::class,'laporkan']);
+Route::post('laporan',[MasyarakatControll::class,'laporkan']);
 
 
 //petugas
-Route::get('login2',[PetugasController::class,'login2']);
-Route::post('login2',[PetugasController::class,'ceklogin2']);
-Route::get('halaman_utama/petugas',[PetugasController::class,'halaman2']);
+Route::get('login2',[AdminController::class,'login2']);
+Route::post('login2',[AdminController::class,'ceklogin2']);
+Route::get('halaman/admin',[AdminController::class,'halaman2']);
+Route::get('registrasi2',[AdminController::class,'registrasi2']);
 
 
 //admin
-Route::get('login3',[AdminController::class,'login3']);
-Route::post('login3',[AdminController::class,'ceklogin3']);
+Route::get('login3',[PetugasController::class,'login3']);
+Route::post('login3',[PetugasController::class,'ceklogin3']); 
