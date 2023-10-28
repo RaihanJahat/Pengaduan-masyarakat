@@ -39,8 +39,8 @@ body{
                         @csrf
                         <div class="mb-3">
 
-                            <label for="id_admin" class="form-label">ID Admin</label>
-                            <input type="number" class="form-control" name="id_admin" id="id_admin" placeholder="ID Admin">
+                            <label for="id_petugas" class="form-label">ID Admin</label>
+                            <input type="number" class="form-control" name="id_petugas" id="id_petugas" placeholder="ID Admin">
 
                             @error('id_admin')
                                 <div class="form-text">
@@ -48,40 +48,40 @@ body{
                                 </div>
                             @enderror
 
-                            <label for="nama_admin" class="form-label">Nama Admin</label>
-                            <input type="text" class="form-control" name="nama_admin" id="nama_admin"
+                            <label for="Nama_petugas" class="form-label">Nama Admin</label>
+                            <input type="text" class="form-control" name="Nama_petugas" id="Nama_petugas"
                                 placeholder="Nama Admin">
 
-                            @error('nama_admin')
+                            @error('Nama_petugas')
                                 <div class="form-text">
                                     {{ $message }}
                                 </div>
                             @enderror
 
-                            <label for="username" class="form-label">Username</label>
-                            <input type="text" class="form-control" name="username" id="username"
+                            <label for="Username" class="form-label">Username</label>
+                            <input type="text" class="form-control" name="Username" id="Username"
                                 placeholder="Usename">
 
-                            @error('username')
+                            @error('Username')
                                 <div class="form-text">
                                     {{ $message }}
                                 </div>
                             @enderror
 
-                            <label for="password" class="form-label">Password</label>
-                            <input type="password" class="form-control" name="password" id="password"
+                            <label for="Password" class="form-label">Password</label>
+                            <input type="Password" class="form-control" name="Password" id="Password"
                                 placeholder="Password">
 
-                            @error('password')
+                            @error('Password')
                                 <div class="form-text">
                                     {{ $message }}
                                 </div>
                             @enderror
-                            <label for="telp" class="form-label">Telp</label>
-                            <input type="number" class="form-control" name="telp" id="telp"
+                            <label for="Telp" class="form-label">Telp</label>
+                            <input type="number" class="form-control" name="Telp" id="Telp"
                                 placeholder="Telp">
 
-                            @error('telp')
+                            @error('Telp')
                                 <div class="form-text">
                                     {{ $message }}
                                 </div>

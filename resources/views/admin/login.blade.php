@@ -129,7 +129,7 @@
             <div class="top-header">
                 <form action="{{url('login2')}}" method="post">
                     @csrf
-                    <header>Login Petugas</header>
+                    <header>Login Admin</header>
             </div>
 
             <div class="input-field">

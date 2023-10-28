@@ -13,7 +13,7 @@ class MasyarakatControll extends Controller
     }
 
 
-    public function registrasi1(){
+    public function registrasi(){
         $m = new Masyarakat();
         return view('masyarakat.registrasi');
 
@@ -76,5 +76,8 @@ class MasyarakatControll extends Controller
         //pindahkan file ke target folder
         $foto->move($folder, $foto->getClientOriginalName());
         return "sukses";
+    }
+    public function halaman_awal(){
+        return view('halaman.halaman_awal');
     }
 }

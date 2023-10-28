@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Halaman Utama</title>
+    <title>Halaman Awal</title>
     <style>
         body {
             margin: 0;
@@ -75,24 +75,14 @@
 
 <body>
     <div class="topnav">
-        <a href="{{url('halaman_utama/masyarakat')}}" class="active">Home</a>
-        <a href="{{url('pengaduan')}}">Pengaduan</a>
-        <a href="#"></a>
-        <a href="#"></a>
-
-
-        <div class="topnav-right">
-            <a href="{{url('login1')}}" class="button">Logout</a>
-            </a>
-        </div>
+        <a href="{{url('login1')}}">Login Masyarakat</a>
+        <a href="{{url('login2')}}">Login Admin</a>
+        <a href="{{url('login3')}}">Login Petugas</a>
     </div>
     <div class="h5">
-        <h1>Selamat Datang</h1>
-        <h2>Di Halaman Utama</h2>
+        <h2>Selamat Datang di Halaman</h2>
+        <h2>Awal Silahkan Login Terlebih Dahulu</h2>
         <h3>ㅤ</h3>
-        <div>
-    <a href="{{url('pengaduan')}}">Pengaduan Masyarakat</a> 
-        </div>
         <h3>ㅤ</h3>
         <h3>ㅤ</h3>
         <h3>ㅤ</h3>

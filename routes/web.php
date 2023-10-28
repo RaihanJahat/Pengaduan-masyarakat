@@ -34,8 +34,9 @@ Route::post('login1',[MasyarakatControll::class,'ceklogin1']);
 Route::get('pengaduan',[MasyarakatControll::class,'pengaduan']);
 Route::post('pengaduan',[MasyarakatControll::class,'pengaduan']);
 Route::get('halaman/masyarakat',[MasyarakatControll::class,'halaman']);
-Route::get('laporan',[MasyarakatControll::class,'laporan']);
+Route::get('/',[MasyarakatControll::class,'halaman_awal']);
 //
+
 Route::get('laporan',[MasyarakatControll::class,'laporkan']);
 Route::post('laporan',[MasyarakatControll::class,'laporkan']);
 
@@ -45,7 +46,9 @@ Route::get('login2',[AdminController::class,'login2']);
 Route::post('login2',[AdminController::class,'ceklogin2']);
 Route::get('halaman/admin',[AdminController::class,'halaman2']);
 Route::get('registrasi2',[AdminController::class,'registrasi2']);
-
+Route::post('registrasi2',[AdminController::class,'simpan']);
+Route::get('laporan',[AdminController::class,'laporan']);
+Route::post('ceklaporan',[AdminController::class,'ceklaporan']);
 
 //admin
 Route::get('login3',[PetugasController::class,'login3']);
