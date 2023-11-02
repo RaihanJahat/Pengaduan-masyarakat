@@ -49,9 +49,10 @@ class MasyarakatControll extends Controller
         $m = new Masyarakat();
         //cek username dan password
         if($m->where('Username',$request->input('Username'))->where('Password',$request->input('Password'))->exists()){
+            session(['username'=> $request->input('username')]);
             return redirect('halaman/masyarakat');
         }
-        return back('')->with('Pesan','Username dan Password tidak terdaftar');
+        return back()->with('Pesan','Username dan Password tidak terdaftar');
         
     }
 
@@ -79,5 +80,9 @@ class MasyarakatControll extends Controller
     }
     public function halaman_awal(){
         return view('halaman.halaman_awal');
+    }
+    public function logout(){
+        session()->flush();
+       return back();
     }
 }

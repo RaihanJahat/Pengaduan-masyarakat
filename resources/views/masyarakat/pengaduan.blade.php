@@ -75,14 +75,13 @@
 </head>
 <body>
     <div class="topnav">
-        <a href="{{url('halaman_utama/masyarakat')}}" class="active">Home</a>
+        <a href="{{url('halaman/masyarakat')}}" class="active">Home</a>
         <a href="{{url('pengaduan')}}">Pengaduan</a>
-        <a href="#"></a>
-        <a href="#"></a>
+
         
       
         <div class="topnav-right">
-    <a href="{{url('login1')}}" class="button">Logout</a>
+    <a href="{{url('/')}}" class="button">Logout</a>
 
         </a>
         </div>

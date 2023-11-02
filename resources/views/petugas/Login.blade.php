@@ -136,7 +136,7 @@
                 <input type="text" class="input" placeholder="Username" name="Username" required>
 
                 <div class="input-field">
-                    <input type="text" class="input" placeholder="Password" name="Password" required>
+                    <input type="password" class="input" placeholder="Password" name="Password" required>
 
                 </div>
                 <div class="input-field">

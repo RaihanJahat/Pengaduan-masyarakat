@@ -11,7 +11,7 @@ class PetugasController extends Controller
         public function ceklogin2(Request $requestt){
             $a = new Petugas();
             if ($a->where('Username',$requestt->input('Username'))->where('Password',$requestt->input('Password'))->exists()){
-                return redirect('halamann');
+                return redirect('halaman/masyarakat');
             }
             return back('')->with('Pesan','Username Dan Password Tidak Terdaftar');
         }
@@ -25,6 +25,14 @@ class PetugasController extends Controller
             $m = new petugas();
             return view('petugas.registrasi');
     
+        }
+        public function validasi(){
+            $m = new petugas();
+            return view('admin.validasi');
+        }
+        public function tanggapan(){
+            $m = new petugas();
+            return view('admin.tanggapan');
         }
     
 }

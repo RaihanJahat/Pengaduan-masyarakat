@@ -11,6 +11,7 @@ body{
     background: linear-gradient(120deg,#3383FF,#000000);
 }
 
+
 </style>
     <link rel="stylesheet" href="/css/bootstrap.min.css">
 </head>
@@ -39,8 +40,8 @@ body{
                         @csrf
                         <div class="mb-3">
 
-                            <label for="id_petugas" class="form-label">ID Admin</label>
-                            <input type="number" class="form-control" name="id_petugas" id="id_petugas" placeholder="ID Admin">
+                            <label for="id_petugas" class="form-label">Nama Petugas</label>
+                            <input type="text" class="form-control" name="id_petugas" id="id_petugas" placeholder="Nama Petugas">
 
                             @error('id_admin')
                                 <div class="form-text">
@@ -48,15 +49,7 @@ body{
                                 </div>
                             @enderror
 
-                            <label for="Nama_petugas" class="form-label">Nama Admin</label>
-                            <input type="text" class="form-control" name="Nama_petugas" id="Nama_petugas"
-                                placeholder="Nama Admin">
-
-                            @error('Nama_petugas')
-                                <div class="form-text">
-                                    {{ $message }}
-                                </div>
-                            @enderror
+                           
 
                             <label for="Username" class="form-label">Username</label>
                             <input type="text" class="form-control" name="Username" id="Username"
@@ -86,7 +79,17 @@ body{
                                     {{ $message }}
                                 </div>
                             @enderror
-                            
+                            <label for="" class="col-form-label col-2">Level</label>
+                            <div class="col-10">
+                            <select class="form-select" id="validationCustom04" name="level" required>
+                              <option value="admin">Admin</option>
+                              <option value="petugas">Petugas</option>
+                            </select>
+                            @error('level')
+                                    <div class="form-text">
+                                        {{$message}}
+                                    </div>
+                                @enderror
                         </div>
                         <div class="col-12 pt-4 text-center">
                             <p class="small mb-0">

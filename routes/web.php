@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\MasyarakatControll;
 use App\Http\Controllers\PetugasController;
+use App\Http\Middleware\MasyarakatMiddleware;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,6 +36,7 @@ Route::get('pengaduan',[MasyarakatControll::class,'pengaduan']);
 Route::post('pengaduan',[MasyarakatControll::class,'pengaduan']);
 Route::get('halaman/masyarakat',[MasyarakatControll::class,'halaman']);
 Route::get('/',[MasyarakatControll::class,'halaman_awal']);
+Route::get('logout',[MasyarakatControll::class,'logout']);
 //
 
 Route::get('laporan',[MasyarakatControll::class,'laporkan']);
@@ -49,7 +51,10 @@ Route::get('registrasi2',[AdminController::class,'registrasi2']);
 Route::post('registrasi2',[AdminController::class,'simpan']);
 Route::get('laporan',[AdminController::class,'laporan']);
 Route::post('ceklaporan',[AdminController::class,'ceklaporan']);
+Route::get('logout1',[AdminController::class,'logout']);
 
 //admin
 Route::get('login3',[PetugasController::class,'login3']);
 Route::post('login3',[PetugasController::class,'ceklogin3']); 
+Route::get('validasi',[PetugasController::class,'validasi']);
+Route::get('tanggapan',[PetugasController::class,'tanggapan']);

@@ -133,10 +133,10 @@
             </div>
 
             <div class="input-field">
-                <input type="text" class="input" placeholder="Username" name="Username" required>
+                <input type="text" class="input" placeholder="username" name="username" required>
 
                 <div class="input-field">
-                    <input type="text" class="input" placeholder="Password" name="Password" required>
+                    <input type="password" class="input" placeholder="password" name="password" required>
 
                 </div>
                 <div class="input-field">

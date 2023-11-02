@@ -77,7 +77,7 @@
     <div class="topnav">
         <a href="{{url('login1')}}">Login Masyarakat</a>
         <a href="{{url('login2')}}">Login Admin</a>
-        <a href="{{url('login3')}}">Login Petugas</a>
+        
     </div>
     <div class="h5">
         <h2>Selamat Datang di Halaman</h2>

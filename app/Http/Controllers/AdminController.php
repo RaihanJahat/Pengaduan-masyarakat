@@ -3,22 +3,24 @@
 namespace App\Http\Controllers;
 
 use App\Models\AdminModels;
+use App\Models\petugas;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
         //petugas
-        public function ceklogin2(Request $requestt){
-            $a = new AdminModels();
-            if ($a->where('Username',$requestt->input('Username'))->where('Password',$requestt->input('Password'))->exists()){
-
-                return redirect('halamann');
-            }
-            return back('')->with('Pesan','Username Dan Password Tidak Terdaftar');
-        }
         public function login2(){
             return view('admin.login');
         }
+        public function ceklogin2(Request $request){
+            $a = new petugas();
+            if ($a->where('username',$request->input('username'))->where('password',$request->input('password'))->exists()){
+
+                return redirect('halaman/admin');
+            }
+            return back('')->with('Pesan','Username Dan Password Tidak Terdaftar');
+        }
+        
         public function halaman2(){
             return view('admin.halaman_utama');
         }
@@ -60,5 +62,13 @@ class AdminController extends Controller
             $m->create($request->all());
             return back()->with('pesan','Selamat, validasi berhasil');
         }
-    
+        public function validasi(){
+            $p = new AdminModels();
+            return view('admin.validasi');
+        }
+        public function logout(){
+            session()->flush();
+           return back();
+        }
 }
+    

@@ -76,12 +76,12 @@
 <body>
     <div class="topnav">
         <a href="{{url('halaman/admin')}}" class="active">Home</a>
-        <a href="{{url('')}}">Tanggapan</a>
+        <a href="{{url('tanggapan')}}">Tanggapan</a>
         <a href="{{url('laporan')}}">Laporan</a>
 
 
         <div class="topnav-right">
-            <a href="{{url('login2')}}" class="button">Logout</a>
+            <a href="{{url('/')}}" class="button">Logout</a>
             </a>
         </div>
     </div>
