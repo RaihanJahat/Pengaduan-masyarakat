@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Masyarakat;
+use App\Models\Pengaduan;
 use Illuminate\Http\Request;
 
 class MasyarakatControll extends Controller
@@ -49,7 +50,7 @@ class MasyarakatControll extends Controller
         $m = new Masyarakat();
         //cek username dan password
         if($m->where('Username',$request->input('Username'))->where('Password',$request->input('Password'))->exists()){
-            session(['username'=> $request->input('username')]);
+            session(['username'=> $request->input('Username')]);
             return redirect('halaman/masyarakat');
         }
         return back()->with('Pesan','Username dan Password tidak terdaftar');
@@ -58,7 +59,30 @@ class MasyarakatControll extends Controller
 
     //masyarakat
     public function pengaduan(){
-        return view('masyarakat.pengaduan');
+        $pengaduan = new Pengaduan();
+        return view('masyarakat.pengaduan',['pengaduan'=>$pengaduan->all()]);
+    }
+    public function simpan_pengaduan(Request $request){
+        $pengaduan = new Pengaduan();
+
+        $fl = $request->file('foto');
+
+        $fold = 'upload_data_foto';
+
+        $fl->move($fold,$fl->getClientOriginalName());
+
+        $cek = $request->validate([
+            'nik'=>'required|max:16',
+            'tgl_pengaduan'=>'required',
+            'isi_laporan'=>'required',
+        ]);
+        $pengaduan->create([
+            'nik'=>$request->input('nik'),
+            'tgl_pengaduan'=> $request->input('tanggal_pengaduan'),
+            'isi_laporan'=>$request->input('isi_laporan'),
+            'foto'=>$fl->getClientOriginalName(),
+            'status'=>'0'
+        ]);
     }
     public function halaman(){
         return view('masyarakat.halaman_utama');

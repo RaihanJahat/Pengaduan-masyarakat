@@ -15,6 +15,7 @@ class AdminMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
+        if (!session)
         return $next($request);
     }
 }

@@ -81,7 +81,7 @@
         
       
         <div class="topnav-right">
-    <a href="{{url('/')}}" class="button">Logout</a>
+    <a href="{{url('logout')}}" class="button">Logout</a>
 
         </a>
         </div>
@@ -100,19 +100,19 @@
                                         Anda gagal registrasi
                                       </div>
                                     @endif
-                                        <form action="{{url('laporan')}}" method="POST" enctype="multipart/form-data">
+                                        <form action="{{url('pengaduan')}}" method="POST" enctype="multipart/form-data">
                                             @csrf
                                             <div class="mb-3">
                                                 <label for="nik" class="form-label">NIK</label>
-                                                <input type="text" class="form-control" name="nik" id="nik" placeholder="NIK">
+                                                <input type="number" class="form-control" name="nik" id="nik" placeholder="NIK">
                                                 @error('nik')
                                                     <div class="form-text">
                                                         {{$message}}
                                                     </div>
                                                 @enderror
                                                 <div class="mb-3">    
-                                                <label for="tanggal_pengaduan" class="form-label">Tanggal Pengaduan</label>
-                                                <input type="date" class="form-control" name="tanggal_pengaduan" id="nama" placeholder="tanggal_pengaduan">
+                                                <label for="tgl_pengaduan" class="form-label">Tanggal Pengaduan</label>
+                                                <input type="date" class="form-control" name="tgl_pengaduan" id="nama" placeholder="tanggal_pengaduan">
                                                 @error('tanggal_pengaduan')
                                                     <div class="form-text">
                                                         {{$message}}

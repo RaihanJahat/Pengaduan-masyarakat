@@ -32,9 +32,9 @@ Route::get('registrasi',[MasyarakatControll::class,'registrasi']);
 Route::post('Simpan',[MasyarakatControll::class,'simpan']);
 Route::get('login1',[MasyarakatControll::class,'login1']);
 Route::post('login1',[MasyarakatControll::class,'ceklogin1']);
-Route::get('pengaduan',[MasyarakatControll::class,'pengaduan']);
-Route::post('pengaduan',[MasyarakatControll::class,'pengaduan']);
-Route::get('halaman/masyarakat',[MasyarakatControll::class,'halaman']);
+Route::get('pengaduan',[MasyarakatControll::class,'pengaduan'])->middleware(MasyarakatMiddleware::class);
+Route::post('pengaduan',[MasyarakatControll::class,'simpan_pengaduan']);
+Route::get('halaman/masyarakat',[MasyarakatControll::class,'halaman'])->middleware(MasyarakatMiddleware::class);
 Route::get('/',[MasyarakatControll::class,'halaman_awal']);
 Route::get('logout',[MasyarakatControll::class,'logout']);
 //
@@ -57,4 +57,4 @@ Route::get('logout1',[AdminController::class,'logout']);
 Route::get('login3',[PetugasController::class,'login3']);
 Route::post('login3',[PetugasController::class,'ceklogin3']); 
 Route::get('validasi',[PetugasController::class,'validasi']);
-Route::get('tanggapan',[PetugasController::class,'tanggapan']);
+Route::get('tanggapan',[PetugasController::class,'tanggapan'])->middleware(PetugasController::class);

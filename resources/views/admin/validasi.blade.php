@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Validasi</title>
+    <link rel="stylesheet" href="css\bootstrap.min.css">
     <style>
         body {
             margin: 0;
@@ -85,6 +86,67 @@
             <a href="{{url('/')}}" class="button">Logout</a>
             </a>
         </div>
+
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h3>ㅤ</h3>
+                <h3>ㅤ</h3>
+                <h3>ㅤ</h3>
+    
+              <div class="container">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="container">
+                      <div class="card shadow">
+                          <div class="card" >
+                              <h5 class="card-header headertabel">Validasi Laporan</h5>
+                              <div class="card-body">
+                                  {{-- <h5 class="card-title"></h5> --}}
+                                  <table class=" table table-striped-columns">
+                                      <thead>
+                                          <th>ID</th>
+                                          <th>NIK</th>
+                                          <th>Tanggal</th>
+                                          <th>Laporan</th>
+                                          <th>Foto</th>
+                                          <th>Status</th>
+                                          <th>Aksi</th>
+                                      </thead>
+                                      <tbody>
+                                        @foreach ($pengaduan as $wadul)
+                                            <tr>
+                                                <td>{{$wadul->id_pengaduan}}</td>
+                                                <td>{{$wadul->nik}}</td>
+                                                <td>{{$wadul->tgl_pengaduan}}</td>
+                                                <td>{{$wadul->isi_laporan}}</td>
+                                                <td>{{$wadul->foto}}</td>
+                                                <td>{{$wadul->status}}</td>
+                                            </tr>
+                                        @endforeach
+                                        <tr>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+                                          <td>
+                                            <div>
+                                              <a href="" class="btn btn-primary" type="submit">Validasi</a>
+                                            </div>
+                                          </td>
+                                        </tr>
+                                   
+                                      </tbody>
+                                    </table></p>
+                              </div>
+                          </div>
+                      </div>
+                      </div>
+                </div>
+              </div>
+            </div>
     </div>
     <div class="h5">
         <h2>ㅤ</h2>
@@ -93,7 +155,10 @@
         <h3>ㅤ</h3>
         <h3>ㅤ</h3>
         <h3>ㅤ</h3>
+        <h3>ㅤ</h3>
     </div>
 </body>
+
+<script src="js\bootstrap.min.js"></script>
 
 </html>

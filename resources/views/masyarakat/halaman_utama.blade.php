@@ -79,7 +79,7 @@
         <a href="{{url('pengaduan')}}">Pengaduan</a>
 
         <div class="topnav-right">
-            <a href="{{url('/')}}" class="button">Logout</a>
+            <a href="{{url('logout')}}" class="button">Logout</a>
             </a>
         </div>
     </div>
